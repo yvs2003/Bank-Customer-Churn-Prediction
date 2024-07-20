@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function displayMessage() {
+            var message = document.createElement("p");
+            var text = document.createTextNode("Hello!");
+            message.appendChild(text);
+            document.body.appendChild(message);
+        }
+    </script>
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form action="/predict" method="post" onsubmit="displayMessage();">
+        <label for="credit_score">Credit Score:</label>
+        <input type="number" name="credit_score" min="0" required><br>
+
+        <label for="country">Country:</label>
+        <select name="country">
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Germany">Germany</option>
+        </select><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" min="18" max="80" required><br>
+
+        <label for="tenure">Tenure:</label>
+        <input type="number" name="tenure" min="0" max="10" required><br>
+
+        <label for="balance">Balance:</label>
+        <input type="number" name="balance" min="0" required><br>
+
+        <label for="products_number">Number of Products:</label>
+        <input type="number" name="products_number" min="1" max="4" required><br>
+
+        <label for="credit_card">Has Credit Card:</label>
+        <input type="radio" name="credit_card" value="yes"> Yes
+        <input type="radio" name="credit_card" value="no"> No<br>
+
+        <label for="active_member">Active Member:</label>
+        <input type="radio" name="active_member" value="yes"> Yes
+        <input type="radio" name="active_member" value="no"> No<br>
+
+        <label for="estimated_salary">Estimated Salary:</label>
+        <input type="number" name="estimated_salary" min="0" required><br>
+
+        <input type="submit" value="Predict Churn">
+    </form>
+</body>
+</html>
